@@ -1,0 +1,42 @@
+Task 5: Strategy & Leadership (Short Answers)
+
+1. You are leading a team of 4 QA engineers. The sprint velocity is dropping due to flaky automation tests. How will you handle this situation?
+
+Ans. As a QA Lead, my first priority would be to stabilize automation without allowing flaky tests to block sprint progress or hide genuine failures.
+
+I would approach this in five steps:
+
+1. Identify flaky tests: Analyze CI history and identify tests that fail intermittently but pass on reruns. Temporarily quarantine them so they don't block merges, but continue monitoring their results.
+
+2. Root Cause Analysis: Categorize failures into locator issues, hard-coded waits, test data dependencies, environment instability, and synchronization issues.
+
+3. Team Ownership: Distribute fixes across the four engineers, assign a rotating flaky-test owner, and reserve 15–20% of sprint capacity for stabilization.
+
+4. Prevent Recurrence: Introduce coding standards such as explicit waits, stable selectors (`data-testid`), independent test data, and repeated execution of new tests before merging.
+
+5. Track Improvements: Monitor flaky test percentage, automation pass rate, rerun time, and regression execution time during sprint retrospectives.
+
+My objective would be to make automation a reliable quality gate rather than a bottleneck, improving sprint predictability and team velocity.
+
+2. During production release, you find 2 critical bugs reported by the client that were missed in QA. What’s your approach to fix gaps in process and testing?
+
+Ans. I would handle this in two parallel tracks:
+
+1. Immediate Resolution:
+	- Assess business impact and affected users.
+	- Coordinate with development for a hotfix, rollback, or feature flag if required.
+	- Perform targeted testing and focused regression.
+	- Keep the client and stakeholders informed.
+
+2. Process Improvement:
+	- Conduct a blameless RCA using the 5 Whys technique.
+	- Identify whether the gap was in requirements, test coverage, test data, environment, or 		regression testing.
+	- Add the missed scenarios to the regression suite.
+	- Strengthen requirement reviews and risk-based testing.
+	- Introduce mandatory release checklists, smoke testing, and post-release monitoring.
+
+3. Measure Effectiveness:
+
+	- Track defect leakage, production incidents, and recurring defect patterns over 		subsequent releases.
+
+My objective would be to identify the process gaps, prevent recurrence, and move from reactive defect fixing to proactive quality assurance.
